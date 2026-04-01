@@ -119,7 +119,7 @@ mkdir -p "$XDG_CACHE_HOME"
 Set the dataset path first:
 
 ```bash
-export DATA_ROOT='/data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/content/imagenette2-160'
+export DATA_ROOT="/data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/content/imagenette2-160"
 ```
 
 ### K-fold version
