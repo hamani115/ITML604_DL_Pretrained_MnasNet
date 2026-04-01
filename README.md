@@ -5,7 +5,7 @@ This README shows how to set up and run the MNASNet scripts on the Hayrat cluste
 ## 1) Go to your working directory
 
 ```bash
-cd /data/dataset/$USER/
+cd /data/datasets/$USER/
 ```
 
 ## 2) Clone your repository
@@ -76,7 +76,7 @@ $DATA_ROOT/
 Recommended: Python 3.11 venv.
 
 ```bash
-cd /data/dataset/$USER/ITML604_DL_Pretrained_MnasNet
+cd /data/datasets/$USER/ITML604_DL_Pretrained_MnasNet
 /usr/bin/python3.11 -m venv dl_env_py311
 source dl_env_py311/bin/activate
 python --version
@@ -108,8 +108,8 @@ python -m pip install torch torchvision --index-url https://download.pytorch.org
 This avoids filling your home directory when pretrained weights are downloaded.
 
 ```bash
-export TORCH_HOME=/data/dataset/$USER/torch_cache
-export XDG_CACHE_HOME=/data/dataset/$USER/.cache
+export TORCH_HOME=/data/datasets/$USER/torch_cache
+export XDG_CACHE_HOME=/data/datasets/$USER/.cache
 mkdir -p "$TORCH_HOME/hub/checkpoints"
 mkdir -p "$XDG_CACHE_HOME"
 ```
@@ -152,7 +152,7 @@ python3 mnasnet_imagenette_simple_split.py \
 If your repository already contains a `run.sh`, make sure it activates the environment first:
 
 ```bash
-source /data/dataset/$USER/ITML604_DL_Pretrained_MnasNet/dl_env_py311/bin/activate
+source /data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/dl_env_py311/bin/activate
 ```
 
 Then run:
