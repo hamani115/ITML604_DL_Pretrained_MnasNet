@@ -56,7 +56,7 @@ tar -xzf imagenette2-160.tgz
 Set the dataset path:
 
 ```bash
-export DATA_ROOT='/data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/content/imagenette2-160'
+export DATA_ROOT="/data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/content/imagenette2-160"
 ls -lah $DATA_ROOT
 ```
 
