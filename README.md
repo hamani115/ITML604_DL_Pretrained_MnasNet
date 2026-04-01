@@ -65,7 +65,7 @@ You should see:
 * `val/`
 
 **Note:** that the code expect the dataset as the following layout:
-```
+```bash
 $DATA_ROOT/
     train/<class folders...>
     val/<class folders...>
@@ -90,13 +90,18 @@ python -m pip install --upgrade pip setuptools wheel
 
 ## 7) Install Python requirements
 
-If you have a `requirements.txt` file:
+Install the PyTorch CUDA manually:
+```bash
+python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+```
+
+Install rest packages from `requirements.txt` file:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-If not, install the main packages manually:
+**If did not work**, install the main packages manually:
 
 ```bash
 python -m pip install numpy matplotlib pillow scikit-learn
@@ -146,10 +151,10 @@ python3 mnasnet_imagenette_simple_split.py \
     --batch_size 128 \
     --lr 3e-4
 ```
+---
+### Or run `run.sh`
 
-## 10) Or run `run.sh`
-
-If your repository already contains a `run.sh`, make sure it activates the environment first:
+The repository already contains a `run.sh` which has python scripts, make sure it activates the environment first:
 
 ```bash
 source /data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/dl_env_py311/bin/activate
@@ -161,7 +166,7 @@ Then run:
 bash run.sh
 ```
 
-## 11) Useful checks
+## 10) Useful checks
 
 Check Python and CUDA visibility:
 
@@ -175,7 +180,7 @@ Check GPU status:
 nvidia-smi
 ```
 
-## 12) Output files
+## 11) Output files
 
 Your run directory will usually contain:
 
