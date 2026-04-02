@@ -164,6 +164,18 @@ Set the dataset path first:
 export DATA_ROOT="/data/datasets/$USER/ITML604_DL_Pretrained_MnasNet/content/imagenette2-160"
 ```
 
+### Simple split version
+
+```bash
+python3 mnasnet_imagenette_simple_split.py \
+    --data_root $DATA_ROOT \
+    --out_dir runs_mnasnet_simple_split_T4_test1 \
+    --img_size 224 \
+    --epochs 8 \
+    --batch_size 128 \
+    --lr 3e-4
+```
+
 ### K-fold version
 
 ```bash
@@ -177,17 +189,6 @@ python3 mnasnet_imagenette_kfold.py \
     --kfold 5
 ```
 
-### Simple split version
-
-```bash
-python3 mnasnet_imagenette_simple_split.py \
-    --data_root $DATA_ROOT \
-    --out_dir runs_mnasnet_T4_test1 \
-    --img_size 224 \
-    --epochs 8 \
-    --batch_size 128 \
-    --lr 3e-4
-```
 ---
 ### Or run `run.sh`
 
