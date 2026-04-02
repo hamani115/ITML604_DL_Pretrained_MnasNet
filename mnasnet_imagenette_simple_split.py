@@ -1,4 +1,8 @@
 """
+filename:
+./mnasnet_imagenette_simple_split.py
+
+
 Code expect dataset in the following layout:
   $DATA_ROOT/
     train/<class folders...>
@@ -11,7 +15,6 @@ import json
 import random
 import time
 from pathlib import Path
-from typing import Dict, List
 import numpy as np
 import torch
 import torch.nn as nn

@@ -1,8 +1,18 @@
+"""
+filename:
+./mnasnet_imagenette_kfold.py
+
+Code expect dataset in the following layout:
+  $DATA_ROOT/
+    train/<class folders...>
+    val/<class folders...>
+
+"""
+
 import argparse
 import json
 import random
 from pathlib import Path
-from typing import Dict, List, Tuple
 import numpy as np
 import torch
 import torch.nn as nn
