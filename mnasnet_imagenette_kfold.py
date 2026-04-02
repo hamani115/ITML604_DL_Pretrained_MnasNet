@@ -184,7 +184,7 @@ def main():
     # 4. Cross-validation loop
     # ==================================================
     skf = StratifiedKFold(n_splits=args.kfold, shuffle=True, random_state=args.seed)
-    fold_metrics: List[Dict[str, float]] = []
+    fold_metrics = []
 
     for fold, (train_index, val_index) in enumerate(skf.split(all_indices, all_targets), start=1):
         run_dir = out_dir / f"fold_{fold:02d}"

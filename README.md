@@ -1,7 +1,44 @@
 # Hayrat GPU Setup for MNASNet on Imagenette (ITML604 Assignment)
 
-This README shows how to set up and run the MNASNet scripts on the Hayrat cluster.
+This README shows how to set up and run the MNASNet python scripts on the Hayrat cluster for ITML604 Deep Learning course assignment work (presented [here](https://docs.google.com/presentation/d/12dyahcTCVioS2vrKSC-EHHiw-9xrFbiuzYIDqyQqXQE/edit?usp=sharing))
+## Python scripts
+There is two main version of MNASNet python script that was used to get the results presented in the slides ([here](https://docs.google.com/presentation/d/12dyahcTCVioS2vrKSC-EHHiw-9xrFbiuzYIDqyQqXQE/edit?usp=sharing)).
+### Simple split version:
+filename:
+```bash
+mnasnet_imagenette_simple_split.py
+```
 
+Executed with following configuration:
+```bash
+python3 mnasnet_imagenette_simple_split.py \
+    --data_root $DATA_ROOT \
+    --out_dir runs_mnasnet_T4_test1 \
+    --img_size 224 \
+    --epochs 8 \
+    --batch_size 128 \
+    --lr 3e-4
+```
+
+### K-fold version:
+filename:
+```bash
+mnasnet_imagenette_kfold.py
+```
+
+Executed with following configuration:
+```bash
+python3 mnasnet_imagenette_kfold.py \
+    --data_root $DATA_ROOT \
+    --out_dir runs_mnasnet_kfold_T4_test1 \
+    --img_size 224 \
+    --epochs 8 \
+    --batch_size 128 \
+    --lr 3e-4 \
+    --kfold 5
+```
+
+# Step by Step Guide
 ## 1) Go to your working directory
 
 ```bash
